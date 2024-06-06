@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import pandas as pd
-from utils.wilcoxon_ranking import pairs_metrics_multi_line
+from utils.wilcoxon_ranking import pairs_metrics_multi_line, pairs_metrics_to_table
 from utils.datasets_table_description import make_description_table, result_tables_IR
 
 # method_names = ["MOONF1", "MOONF2", "DT", "RF", "RF_b"] # MOONF1
@@ -60,6 +60,10 @@ for dataset_id, dataset_name in enumerate(dataset_names):
 # WILCOXON
 # pairs_metrics_multi_line(method_names=list(method_names), data_np=data_np, dataset_names=dataset_names, metrics=metrics_alias, filename="wilcoxon_MOONF1", ref_methods=method_names) # MOONF1
 # pairs_metrics_multi_line(method_names=list(method_names), data_np=data_np, dataset_names=dataset_names, metrics=metrics_alias, filename="wilcoxon_MOONF2", ref_methods=method_names) # MOONF2
+
+# WILCOXON to TABLE
+# pairs_metrics_to_table(method_names=list(method_names), data_np=data_np, dataset_names=dataset_names, metrics=metrics_alias, filename="wilcoxon_MOONF1", ref_methods=method_names) # MOONF1
+pairs_metrics_to_table(method_names=list(method_names), data_np=data_np, dataset_names=dataset_names, metrics=metrics_alias, filename="wilcoxon_MOONF2", ref_methods=method_names) # MOONF2
 
 # DATASET TABLE
 
